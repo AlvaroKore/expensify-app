@@ -1,0 +1,56 @@
+INSTALAR LIVE SERVER
+npm install -g live-server
+
+INICIAR LIVE SERVER
+live-server public 
+
+
+CODIGO QUE GENERA BABEL SI TIENE REACT preset
+//  var template = React.createElement("p", {
+//     id: "55",
+//     hola: "que pes"
+//   }, "without jsx");
+
+
+PARA PODER CORRER BABEL 
+
+npm install -g  babel-cli@6.24.1 
+babel --help // para verificar que ya está instaldo babel
+
+npm install --save babel-preset-react@6.24.1 babel-preset-env@1.5.2
+
+PARA COMPILAR
+
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+//PARA DESINSTALAR babel-cli  y live-server
+npm uninstall -g babel-cli live-server
+
+
+// CUANDO YA QUEREMOS USAR BABEL CON WEBPACK
+
+npm install --save babel-core@6.25.0 babel-loader@7.1.1
+
+// PARA USAR LA NUEVA SINTAXIS DE CLASES AGREGARMOS UN PLUGIN Y EVISTAMOS PONER CONSTRUCTOR Y BIND
+
+npm install --save babel-plugin-transform-class-properties
+
+y agregamos configuracion en .babelrc
+
+
+// USAR CSS CON WEBPACK
+
+instalar css-loader (webpack entienda css) y style-loader (webpack inyecte style en doom)
+
+para usar sass y lo puedas importar hay que usar loader sass-loader.
+para que puedas convertir de sass a css usarmos node-sass
+
+// REM en css
+un rem = 16px si en html lo ponemos en 62.5% conlleva a que 16 * .625 = 10 por lo tanto 2.2rem => 22px
+
+
+// React router
+
+cuando creamos una ruta por default hace peticion al server. por lo tanto tenemos que decirle a webpack
+que vamos hacer router desde el cliente. 
+deverServer -> historyApiFallback: true
