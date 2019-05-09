@@ -7,7 +7,11 @@ exports[`should render ExpensesSummary correctly 1`] = `
   </h3>
   <p>
     Viewing 
-     expenses totalling 
+    1
+     
+    expense
+     totalling 
+    $0.00
   </p>
 </div>
 `;
